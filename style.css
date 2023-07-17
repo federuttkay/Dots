@@ -76,7 +76,8 @@ h1 {
 
 .dots-field {
 	max-width: 500px;
-	aspect-ratio: 1;
+	height: 500px;
+	/* aspect-ratio: 1; */
 	margin-inline: auto;
 	background-color: var(--field-bg);
 	border: 10px solid var(--field-border);
@@ -88,7 +89,8 @@ h1 {
 	--left: 30%;
 
 	width: 5px;
-	aspect-ratio: 1;
+	height: 5px;
+	/* aspect-ratio: 1; */
 	border-radius: 100%;
 	background-color: var(--dots-clr);
 	position: absolute;
