@@ -75,7 +75,7 @@ h1 {
 }
 
 .dots-field {
-	width: 500px;
+	max-width: 500px;
 	aspect-ratio: 1;
 	margin-inline: auto;
 	background-color: var(--field-bg);
