@@ -38,23 +38,34 @@ body {
 	margin: 1.5rem auto;
 	display: grid;
 	grid-auto-flow: column;
+	grid-auto-columns: 9rem;
 	gap: 1rem;
 	width: min-content;
 }
 
-@media (max-width: 400px) {
+.inputs > * {
+	border: 0;
+	border-radius: 100vw;
+	padding: 0.5em 0;
+	/* width: 9rem; */
+}
+
+@media (max-width: 21rem) {
 	.inputs {
 		grid-auto-flow: row;
+		width: 100%;
+		grid-auto-columns: 100%;
+	}
+
+	.inputs > * {
+		width: 100%;
+		/* width: min(9rem, 100%); */
 	}
 }
 
 .inputs input {
 	text-align: center;
-	width: 9rem;
-	padding: 0.5em 1em;
-	border-radius: 100vw;
 	appearance: textfield;
-	border: 0;
 	outline: 0;
 }
 
@@ -63,12 +74,12 @@ body {
 	color: white;
 }
 
+.ej {
+	background-color: red;
+}
+
 .inputs button {
 	background-color: var(--form-bg);
-	border: 0;
-	border-radius: 100vw;
-	padding: 0.5em 1em;
-	width: 9rem;
 }
 
 .inputs button:active {
@@ -82,19 +93,11 @@ h1 {
 
 .dots-field {
 	max-width: 500px;
-	/* height: 500px;
-	aspect-ratio: 1; */
 	margin-inline: auto;
 	background-color: var(--field-bg);
 	border: 10px solid var(--field-border);
 	position: relative;
 }
-/* @supports (aspect-ratio: 1) {
-	.dots-field {
-		height: auto;
-		aspect-ratio: 1;
-	}
-} */
 
 .dot {
 	--top: 50%;
@@ -102,7 +105,6 @@ h1 {
 
 	width: 5px;
 	height: 5px;
-	/* aspect-ratio: 1; */
 	border-radius: 100%;
 	background-color: var(--dots-clr);
 	position: absolute;
