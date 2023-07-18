@@ -42,6 +42,12 @@ body {
 	width: min-content;
 }
 
+@media (max-width: 400px) {
+	.inputs {
+		grid-auto-flow: row;
+	}
+}
+
 .inputs input {
 	text-align: center;
 	width: 9rem;
@@ -76,13 +82,19 @@ h1 {
 
 .dots-field {
 	max-width: 500px;
-	height: 500px;
-	/* aspect-ratio: 1; */
+	/* height: 500px;
+	aspect-ratio: 1; */
 	margin-inline: auto;
 	background-color: var(--field-bg);
 	border: 10px solid var(--field-border);
 	position: relative;
 }
+/* @supports (aspect-ratio: 1) {
+	.dots-field {
+		height: auto;
+		aspect-ratio: 1;
+	}
+} */
 
 .dot {
 	--top: 50%;
